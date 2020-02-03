@@ -10,7 +10,6 @@
 [Demo](#demo)
 
 -  [Movie](#movie-demo)
--  [Pictures](#pictures-demo)
 
 
 
@@ -29,13 +28,6 @@
 ![!Demogif](demo.gif)
 
 ---
-### pictures Demo
-
-![!Demopng](accueil.png)
-
-
----
- 
 
 ## Tech Stack
 
