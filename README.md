@@ -3,7 +3,7 @@
 ## Janvier 2020
  
 
-**(FrontEnd => React, styled components and Redux)**
+**(FrontEnd => React, React-router, styled components and Redux)**
 
 
 
