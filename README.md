@@ -55,10 +55,10 @@
 
 - Clone or download this repo https://github.com/rodolphe37/BluePrint-react-redux-styled-components.git
  
-- For install node version : 
+- For install node version doing in the console: 
 - ``` $ nvm use ```
 
- Do in the console :
+ Then doing in the console :
 
 -  ``` $ cd BluePrint-react-redux-styled-components```
 
