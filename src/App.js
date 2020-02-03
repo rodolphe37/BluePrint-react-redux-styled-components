@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { connect } from "react-redux";
+import logo from "./logo.svg";
+import { fetchColor } from "./actions";
+import GlobalStyles from "./globalStyles";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-function App() {
+import Home from "./components/pages/Home";
+import { AppContainer, Logo, Header, StyledLink } from "./Components";
+
+function App({ fetchColor, color }) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContainer>
+      <GlobalStyles />
+      <Router>
+        <Header color={color} onClick={fetchColor}>
+          <Logo src={logo} alt="logo" />
+          <p>
+            Edit <code>src/App.js</code> and save to reload.
+          </p>
+          <StyledLink to="/home">Home page</StyledLink>
+          <StyledLink to="/">Index page</StyledLink>
+
+          <Route path="/home" exact component={Home} />
+        </Header>
+      </Router>
+    </AppContainer>
   );
 }
 
-export default App;
+function mapStateToProps(state) {
+  console.log(state);
+  return {
+    color: state.color.color
+  };
+}
+
+const mapDispatchToProps = {
+  fetchColor
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);
